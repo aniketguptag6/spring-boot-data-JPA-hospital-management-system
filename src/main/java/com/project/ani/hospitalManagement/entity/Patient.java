@@ -46,6 +46,11 @@ public class Patient {
 
     private String gender;
 
+    @OneToOne
+    @MapsId
+    private User user;
+
+
     @CreationTimestamp
     @Column(updatable = false)
     private LocalDateTime createdAt;
